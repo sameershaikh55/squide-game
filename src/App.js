@@ -17,10 +17,10 @@ import Dashboard from "./pages/Panel/Dashboard";
 function App() {
 	return (
 		<Switch>
-			{/* <Route exact path="/" component={Home} /> */}
+			<Route exact path="/" component={Home} />
 			<Route exact path="/winner" component={Winner} />
 			<Route exact path="/login" component={Login} />
-			<Route exact path="/" component={Dashboard} />
+			<Route exact path="/dashboard" component={Dashboard} />
 		</Switch>
 	);
 }

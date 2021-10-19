@@ -356,6 +356,348 @@ body {
   margin-right: auto;
 }
 
+.roadmap_container {
+  /* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+}
+
+.roadmap_container .cd-container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: #000;
+  padding: 0 10%;
+  border-radius: 2px;
+}
+
+.roadmap_container .cd-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.roadmap_container #cd-timeline1,
+.roadmap_container #cd-timeline2,
+.roadmap_container #cd-timeline3,
+.roadmap_container #cd-timeline4,
+.roadmap_container #cd-timeline5,
+.roadmap_container #cd-timeline6,
+.roadmap_container #cd-timeline7,
+.roadmap_container #cd-timeline8,
+.roadmap_container #cd-timeline9,
+.roadmap_container #cd-timeline10 {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.roadmap_container #cd-timeline1::before,
+.roadmap_container #cd-timeline2::before,
+.roadmap_container #cd-timeline3::before,
+.roadmap_container #cd-timeline4::before,
+.roadmap_container #cd-timeline5::before,
+.roadmap_container #cd-timeline6::before,
+.roadmap_container #cd-timeline7::before,
+.roadmap_container #cd-timeline8::before,
+.roadmap_container #cd-timeline9::before,
+.roadmap_container #cd-timeline10::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+}
+
+.roadmap_container #cd-timeline1::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #eb4984), color-stop(3%, white));
+  background: linear-gradient(180deg, #eb4984 3%, white 3%);
+}
+
+.roadmap_container #cd-timeline2::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(12%, #eb4984), color-stop(12%, white));
+  background: linear-gradient(180deg, #eb4984 12%, white 12%);
+}
+
+.roadmap_container #cd-timeline3::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(22%, #eb4984), color-stop(22%, white));
+  background: linear-gradient(180deg, #eb4984 22%, white 22%);
+}
+
+.roadmap_container #cd-timeline4::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(32%, #eb4984), color-stop(32%, white));
+  background: linear-gradient(180deg, #eb4984 32%, white 32%);
+}
+
+.roadmap_container #cd-timeline5::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(42%, #eb4984), color-stop(42%, white));
+  background: linear-gradient(180deg, #eb4984 42%, white 42%);
+}
+
+.roadmap_container #cd-timeline6::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, #eb4984), color-stop(52%, white));
+  background: linear-gradient(180deg, #eb4984 52%, white 52%);
+}
+
+.roadmap_container #cd-timeline7::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #eb4984), color-stop(62%, white));
+  background: linear-gradient(180deg, #eb4984 62%, white 62%);
+}
+
+.roadmap_container #cd-timeline8::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(72%, #eb4984), color-stop(72%, white));
+  background: linear-gradient(180deg, #eb4984 72%, white 72%);
+}
+
+.roadmap_container #cd-timeline9::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(82%, #eb4984), color-stop(82%, white));
+  background: linear-gradient(180deg, #eb4984 82%, white 82%);
+}
+
+.roadmap_container #cd-timeline10::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #eb4984), to(white));
+  background: linear-gradient(180deg, #eb4984 100%, white 100%);
+}
+
+@media only screen and (min-width: 1170px) {
+  .roadmap_container #cd-timeline1,
+  .roadmap_container #cd-timeline2,
+  .roadmap_container #cd-timeline3,
+  .roadmap_container #cd-timeline4,
+  .roadmap_container #cd-timeline5,
+  .roadmap_container #cd-timeline6,
+  .roadmap_container #cd-timeline7,
+  .roadmap_container #cd-timeline8,
+  .roadmap_container #cd-timeline9,
+  .roadmap_container #cd-timeline10 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .roadmap_container #cd-timeline1::before,
+  .roadmap_container #cd-timeline2::before,
+  .roadmap_container #cd-timeline3::before,
+  .roadmap_container #cd-timeline4::before,
+  .roadmap_container #cd-timeline5::before,
+  .roadmap_container #cd-timeline6::before,
+  .roadmap_container #cd-timeline7::before,
+  .roadmap_container #cd-timeline8::before,
+  .roadmap_container #cd-timeline9::before,
+  .roadmap_container #cd-timeline10::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.roadmap_container .cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+
+.roadmap_container .cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.roadmap_container .cd-timeline-block:first-child {
+  margin-top: 0;
+}
+
+.roadmap_container .cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1170px) {
+  .roadmap_container .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .roadmap_container .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .roadmap_container .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.roadmap_container .cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap_container .cd-timeline-img {
+  background: #eb4984;
+}
+
+@media only screen and (min-width: 1170px) {
+  .roadmap_container .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+.roadmap_container .cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  border-radius: 2px;
+  padding: 1em;
+}
+
+.roadmap_container .cd-timeline-content .timeline-content-info {
+  background: #2b343a;
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+}
+
+.roadmap_container .cd-timeline-content .timeline-content-info i {
+  margin-right: 5px;
+}
+
+.roadmap_container .cd-timeline-content .timeline-content-info .timeline-content-info-title,
+.roadmap_container .cd-timeline-content .timeline-content-info .timeline-content-info-date {
+  width: calc(50% - 2px);
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+  .roadmap_container .cd-timeline-content .timeline-content-info .timeline-content-info-title,
+  .roadmap_container .cd-timeline-content .timeline-content-info .timeline-content-info-date {
+    display: block;
+    width: 100%;
+  }
+}
+
+.roadmap_container .cd-timeline-content .content-skills {
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.roadmap_container .cd-timeline-content .content-skills li {
+  background: #40484d;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 2px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 3px 2px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.roadmap_container .cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.roadmap_container .cd-timeline-content h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.roadmap_container .cd-timeline-content p,
+.roadmap_container .cd-timeline-content .cd-date {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+.roadmap_container .cd-timeline-content .cd-date {
+  display: inline-block;
+}
+
+.roadmap_container .cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+@media only screen and (min-width: 768px) {
+  .roadmap_container .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .roadmap_container .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .roadmap_container .cd-timeline-content .cd-read-more,
+  .roadmap_container .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .roadmap_container .cd-timeline-content {
+    color: white;
+    top: -1rem;
+    margin-left: 0;
+    padding: 1.6rem 0rem;
+    width: 36%;
+    margin: 0 5%;
+  }
+  .roadmap_container .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333c42;
+  }
+  .roadmap_container .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 150%;
+    top: 6px;
+    font-size: 4rem;
+  }
+  .roadmap_container .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .roadmap_container .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333c42;
+  }
+  .roadmap_container .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .roadmap_container .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 150%;
+    text-align: right;
+  }
+}
+
 .login_container {
   background: #000;
   height: 90vh;
