@@ -44,34 +44,40 @@ const Collection = () => {
 		<div className="collection_container">
 			<div className="page_container">
 				<div className="container-fluid">
-					<h1 className="head text-center color1">Collection Squid Game</h1>
-					<p className="para text-center text-white">
-						The Collection Squid Game consists of collecting NFT of different
-						types of characters, with which you can receive SOL which is the
-						cryptocurrency of the next generation blockchain network Solana, as
-						well as you can collect, sell and exchange your NFT to receive new
-						NFT.
-					</p>
-					<br />
-					<h5 className="para color1 fw600 text-center">Types of NFT</h5>
-					<br />
+					<div className="row">
+						<div className="col-11 col-md-12 mx-auto">
+							<h1 className="head text-center color1">Collection Squid Game</h1>
+							<p className="para text-center text-white">
+								The Collection Squid Game consists of collecting NFT of
+								different types of characters, with which you can receive SOL
+								which is the cryptocurrency of the next generation blockchain
+								network Solana, as well as you can collect, sell and exchange
+								your NFT to receive new NFT.
+							</p>
+							<br />
+							<h5 className="para color1 fw600 text-center mb-2 mb-md-0">
+								Types of NFT
+							</h5>
+							<br />
 
-					<div className="nft_container">
-						{data.map((prev, ind) => {
-							const { i, p, t, a } = prev;
-							return (
-								<div key={ind} className="nft_card">
-									<div className="img_cont">
-										<img className="w-100" src={i} alt="" />
-										<h4 className="text-white f28 fw700">{t}</h4>
-									</div>
-									<div className="text-center">
-										<p className="mt-2 mb-1 f18 color1">{a}</p>
-										<p className="text-white f14">{p}</p>
-									</div>
-								</div>
-							);
-						})}
+							<div className="nft_container">
+								{data.map((prev, ind) => {
+									const { i, p, t, a } = prev;
+									return (
+										<div key={ind} className="nft_card mt-4 mt-sm-0">
+											<div className="img_cont">
+												<img className="w-100" src={i} alt="" />
+												<h4 className="text-white f28 fw700">{t}</h4>
+											</div>
+											<div className="text-center">
+												<p className="mt-2 mb-1 f18 color1">{a}</p>
+												<p className="text-white f14">{p}</p>
+											</div>
+										</div>
+									);
+								})}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

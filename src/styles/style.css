@@ -18,42 +18,6 @@ body {
   background-color: #000 !important;
 }
 
-@media screen and (max-width: 992px) {
-  html {
-    font-size: 100%;
-  }
-}
-
-@media screen and (max-width: 668px) {
-  html {
-    font-size: 92%;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  html {
-    font-size: 88%;
-  }
-}
-
-@media screen and (max-width: 475px) {
-  html {
-    font-size: 84%;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  html {
-    font-size: 80%;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  html {
-    font-size: 76%;
-  }
-}
-
 .f8 {
   font-size: 0.5rem;
 }
@@ -232,6 +196,10 @@ body {
   transition: 0.6s;
 }
 
+.header_container .logo_cont {
+  max-width: 200px;
+}
+
 .header_container ul li {
   color: #fff;
 }
@@ -251,7 +219,7 @@ body {
   background: linear-gradient(180deg, black 18%, rgba(0, 0, 0, 0.252539) 50%, black 75%), url("../assets/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   min-height: 1250px;
 }
@@ -365,6 +333,8 @@ Main components
 }
 
 .roadmap_container .cd-container {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
@@ -409,7 +379,7 @@ Main components
   position: absolute;
   top: 0;
   left: 25px;
-  height: 100%;
+  height: 96%;
   width: 4px;
 }
 
@@ -419,43 +389,43 @@ Main components
 }
 
 .roadmap_container #cd-timeline2::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(12%, #eb4984), color-stop(12%, white));
-  background: linear-gradient(180deg, #eb4984 12%, white 12%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14%, #eb4984), color-stop(14%, white));
+  background: linear-gradient(180deg, #eb4984 14%, white 14%);
 }
 
 .roadmap_container #cd-timeline3::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(22%, #eb4984), color-stop(22%, white));
-  background: linear-gradient(180deg, #eb4984 22%, white 22%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #eb4984), color-stop(24%, white));
+  background: linear-gradient(180deg, #eb4984 24%, white 24%);
 }
 
 .roadmap_container #cd-timeline4::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(32%, #eb4984), color-stop(32%, white));
-  background: linear-gradient(180deg, #eb4984 32%, white 32%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(34%, #eb4984), color-stop(34%, white));
+  background: linear-gradient(180deg, #eb4984 34%, white 34%);
 }
 
 .roadmap_container #cd-timeline5::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(42%, #eb4984), color-stop(42%, white));
-  background: linear-gradient(180deg, #eb4984 42%, white 42%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(44%, #eb4984), color-stop(44%, white));
+  background: linear-gradient(180deg, #eb4984 44%, white 44%);
 }
 
 .roadmap_container #cd-timeline6::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, #eb4984), color-stop(52%, white));
-  background: linear-gradient(180deg, #eb4984 52%, white 52%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #eb4984), color-stop(54%, white));
+  background: linear-gradient(180deg, #eb4984 54%, white 54%);
 }
 
 .roadmap_container #cd-timeline7::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #eb4984), color-stop(62%, white));
-  background: linear-gradient(180deg, #eb4984 62%, white 62%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(64%, #eb4984), color-stop(64%, white));
+  background: linear-gradient(180deg, #eb4984 64%, white 64%);
 }
 
 .roadmap_container #cd-timeline8::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(72%, #eb4984), color-stop(72%, white));
-  background: linear-gradient(180deg, #eb4984 72%, white 72%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(74%, #eb4984), color-stop(74%, white));
+  background: linear-gradient(180deg, #eb4984 74%, white 74%);
 }
 
 .roadmap_container #cd-timeline9::before {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(82%, #eb4984), color-stop(82%, white));
-  background: linear-gradient(180deg, #eb4984 82%, white 82%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84%, #eb4984), color-stop(84%, white));
+  background: linear-gradient(180deg, #eb4984 84%, white 84%);
 }
 
 .roadmap_container #cd-timeline10::before {
@@ -530,12 +500,6 @@ Main components
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-}
-
-.roadmap_container .cd-timeline-img {
-  background: #eb4984;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -794,5 +758,86 @@ Main components
 
 .modal-dialog {
   margin: 10rem auto !important;
+}
+
+@media screen and (max-width: 998px) {
+  .header_container .logo_cont {
+    width: 94.59px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .head {
+    font-size: 4.5rem;
+    line-height: 70px;
+  }
+  .para {
+    font-size: 1.5rem;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .head {
+    font-size: 2.375rem;
+    line-height: 38px;
+  }
+  .para {
+    font-size: 1.125rem;
+    line-height: 27px;
+  }
+  .hero_container {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-3%, black), color-stop(50%, rgba(0, 0, 0, 0.252539)), color-stop(125%, black)), url("../assets/hero.jpg");
+    background: linear-gradient(180deg, black -3%, rgba(0, 0, 0, 0.252539) 50%, black 125%), url("../assets/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 610px;
+  }
+  .collection_container {
+    margin-top: 5rem;
+  }
+  .collection_container .nft_container .nft_card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 90%;
+    margin: auto;
+  }
+  .nft_container .f14 {
+    font-size: 1.375rem;
+  }
+  .nft_container .f18 {
+    font-size: 1.625rem;
+  }
+  .cta_container {
+    padding: 1rem 0rem;
+  }
+  .cta_container .f24 {
+    font-size: 1.125rem;
+  }
+  .roadmap_container .f24 {
+    font-size: 1.125rem;
+  }
+  .roadmap_container .f48 {
+    font-size: 2.25rem;
+  }
+  .inner_team .f28 {
+    font-size: 25px;
+  }
+  .inner_team .f14 {
+    font-size: 18px;
+  }
+  .roadmap_container .cd-timeline-content h2 {
+    font-size: 1.125rem;
+  }
+  .roadmap_container .cd-timeline-content {
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  .roadmap_container .cd-timeline-content p {
+    margin: 0.8em 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

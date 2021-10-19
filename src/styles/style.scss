@@ -23,36 +23,36 @@ html {
 body {
 	background-color: #000 !important;
 }
-@media screen and (max-width: 992px) {
-	html {
-		font-size: 100%;
-	}
-}
-@media screen and (max-width: 668px) {
-	html {
-		font-size: 92%;
-	}
-}
-@media screen and (max-width: 575px) {
-	html {
-		font-size: 88%;
-	}
-}
-@media screen and (max-width: 475px) {
-	html {
-		font-size: 84%;
-	}
-}
-@media screen and (max-width: 380px) {
-	html {
-		font-size: 80%;
-	}
-}
-@media screen and (max-width: 280px) {
-	html {
-		font-size: 76%;
-	}
-}
+// @media screen and (max-width: 992px) {
+// 	html {
+// 		font-size: 100%;
+// 	}
+// }
+// @media screen and (max-width: 668px) {
+// 	html {
+// 		font-size: 92%;
+// 	}
+// }
+// @media screen and (max-width: 575px) {
+// 	html {
+// 		font-size: 88%;
+// 	}
+// }
+// @media screen and (max-width: 475px) {
+// 	html {
+// 		font-size: 84%;
+// 	}
+// }
+// @media screen and (max-width: 380px) {
+// 	html {
+// 		font-size: 80%;
+// 	}
+// }
+// @media screen and (max-width: 280px) {
+// 	html {
+// 		font-size: 76%;
+// 	}
+// }
 
 .f8 {
 	font-size: 0.5rem;
@@ -220,6 +220,10 @@ body {
 	padding-top: 3rem;
 	transition: 0.6s;
 
+	.logo_cont {
+		max-width: 200px;
+	}
+
 	ul {
 		li {
 			color: #fff;
@@ -249,7 +253,7 @@ body {
 		url("../assets/hero.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	width: 100%;
 	min-height: 1250px;
 
@@ -379,6 +383,7 @@ body {
 // 	ROADMAP START
 .roadmap_container {
 	.cd-container {
+		transition: 0.6s;
 		width: 90%;
 		max-width: 1080px;
 		margin: 0 auto;
@@ -427,7 +432,7 @@ Main components
 		position: absolute;
 		top: 0;
 		left: 25px;
-		height: 100%;
+		height: 96%;
 		width: 4px;
 	}
 	// time line dynamic
@@ -441,57 +446,57 @@ Main components
 	#cd-timeline2::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 12%,
-			rgba(255, 255, 255, 1) 12%
+			rgba(235, 73, 132, 1) 14%,
+			rgba(255, 255, 255, 1) 14%
 		);
 	}
 	#cd-timeline3::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 22%,
-			rgba(255, 255, 255, 1) 22%
+			rgba(235, 73, 132, 1) 24%,
+			rgba(255, 255, 255, 1) 24%
 		);
 	}
 	#cd-timeline4::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 32%,
-			rgba(255, 255, 255, 1) 32%
+			rgba(235, 73, 132, 1) 34%,
+			rgba(255, 255, 255, 1) 34%
 		);
 	}
 	#cd-timeline5::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 42%,
-			rgba(255, 255, 255, 1) 42%
+			rgba(235, 73, 132, 1) 44%,
+			rgba(255, 255, 255, 1) 44%
 		);
 	}
 	#cd-timeline6::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 52%,
-			rgba(255, 255, 255, 1) 52%
+			rgba(235, 73, 132, 1) 54%,
+			rgba(255, 255, 255, 1) 54%
 		);
 	}
 	#cd-timeline7::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 62%,
-			rgba(255, 255, 255, 1) 62%
+			rgba(235, 73, 132, 1) 64%,
+			rgba(255, 255, 255, 1) 64%
 		);
 	}
 	#cd-timeline8::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 72%,
-			rgba(255, 255, 255, 1) 72%
+			rgba(235, 73, 132, 1) 74%,
+			rgba(255, 255, 255, 1) 74%
 		);
 	}
 	#cd-timeline9::before {
 		background: linear-gradient(
 			180deg,
-			rgba(235, 73, 132, 1) 82%,
-			rgba(255, 255, 255, 1) 82%
+			rgba(235, 73, 132, 1) 84%,
+			rgba(255, 255, 255, 1) 84%
 		);
 	}
 	#cd-timeline10::before {
@@ -565,12 +570,12 @@ Main components
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
-		box-shadow: 0 0 0 4px $color1, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-			0 3px 0 4px rgba(0, 0, 0, 0.05);
+		// box-shadow: 0 0 0 4px $color1, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+		// 	0 3px 0 4px rgba(0, 0, 0, 0.05);
 	}
-	.cd-timeline-img {
-		background: $color1;
-	}
+	// .cd-timeline-img {
+	// 	background: $color1;
+	// }
 	@media only screen and (min-width: 1170px) {
 		.cd-timeline-img {
 			width: 30px;
@@ -781,3 +786,96 @@ Main components
 	margin: 10rem auto !important;
 }
 // 	PANEL END
+
+// 	MEDIA QUERIES START
+@media screen and (max-width: 998px) {
+	.header_container .logo_cont {
+		width: 94.59px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.head {
+		font-size: 4.5rem;
+		line-height: 70px;
+	}
+	.para {
+		font-size: 1.5rem;
+		line-height: 36px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.head {
+		font-size: 2.375rem;
+		line-height: 38px;
+	}
+	.para {
+		font-size: 1.125rem;
+		line-height: 27px;
+	}
+	.hero_container {
+		background: linear-gradient(
+				180deg,
+				black -3%,
+				rgba(0, 0, 0, 0.252539) 50%,
+				black 125%
+			),
+			url("../assets/hero.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		min-height: 610px;
+	}
+	.collection_container {
+		margin-top: 5rem;
+	}
+	.collection_container .nft_container .nft_card {
+		flex: 0 0 auto;
+		width: 90%;
+		margin: auto;
+	}
+	.nft_container {
+		.f14 {
+			font-size: 1.375rem;
+		}
+		.f18 {
+			font-size: 1.625rem;
+		}
+	}
+	.cta_container {
+		padding: 1rem 0rem;
+
+		.f24 {
+			font-size: 1.125rem;
+		}
+	}
+	.roadmap_container {
+		.f24 {
+			font-size: 1.125rem;
+		}
+		.f48 {
+			font-size: 2.25rem;
+		}
+	}
+	.inner_team {
+		.f28 {
+			font-size: 25px;
+		}
+		.f14 {
+			font-size: 18px;
+		}
+	}
+	.roadmap_container .cd-timeline-content h2 {
+		font-size: 1.125rem;
+	}
+	.roadmap_container .cd-timeline-content {
+		margin-right: 0px;
+		padding-right: 0px;
+	}
+	.roadmap_container .cd-timeline-content p {
+		margin: 0.8em 0;
+	}
+}
+// 	MEDIA QUERIES END
