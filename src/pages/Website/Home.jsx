@@ -8,14 +8,19 @@ import Cta from "../../components/Cta";
 import Roadmap from "../../components/Roadmap";
 import Team from "../../components/Team";
 import Footer from "../../components/Footer";
+import Sidebar from "../../components/Sidebar";
+import { useHooks } from "../../Hooks/useHooks";
 
 const Home = () => {
+	const { isOpen, OnClick } = useHooks();
+
 	return (
 		<>
-			<Header />
+			<Sidebar ClickEvent={OnClick} isOpen={isOpen} />
+			<Header ClickEvent={OnClick} isOpen={isOpen} />
 			<Hero />
 			<Collection />
-			<Cta />
+			<Cta rp />
 			<Roadmap />
 			<Cta />
 			<Team />

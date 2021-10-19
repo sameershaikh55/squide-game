@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // IMPORT ICONS
-import { FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaTwitter, FaDiscord, FaTimes } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 
 // IMPORT IMAGES
@@ -9,10 +9,23 @@ import logo from "../assets/logo.svg";
 import hamburger from "../assets/hamburger.svg";
 
 // IMPORT REACT SCROLL
-import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ isOpen, ClickEvent }) => {
+	let location = useLocation();
+
+	useEffect(() => {
+		if (location.hash) {
+			let elem = document.getElementById(location.hash.slice(1));
+			if (elem) {
+				elem.scrollIntoView({ behavior: "smooth" });
+			}
+		} else {
+			window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+		}
+	}, [location]);
+
 	useEffect(() => {
 		// FOR NAVBAR SCROLLING EFFECT START
 		window.addEventListener("scroll", function () {
@@ -35,26 +48,52 @@ const Header = () => {
 									</NavLink>
 								</div>
 								<div className="d-block d-md-none">
-									<img src={hamburger} alt="" />
+									{(!isOpen && (
+										<img src={hamburger} alt="" onClick={ClickEvent} />
+									)) || (
+										<FaTimes
+											color="#fff"
+											fontSize="2rem"
+											className="pointer"
+											onClick={ClickEvent}
+										/>
+									)}
 								</div>
 								<ul className="list-unstyled d-none d-md-flex mb-0">
 									<li>
-										<Link className="f18 text-decoration-none pointer" to="">
+										<Link
+											activeClassName="active_class"
+											className="f18 text-decoration-none pointer"
+											to="/#about"
+										>
 											About
 										</Link>
 									</li>
 									<li className="ms-4 ps-2">
-										<Link className="f18 text-decoration-none pointer" to="">
+										<Link
+											activeClassName="active_class"
+											className="f18 text-decoration-none pointer"
+											to="/#roadmap"
+										>
 											Roadmap
 										</Link>
 									</li>
 									<li className="ms-4 ps-2">
-										<Link className="f18 text-decoration-none pointer" to="">
+										<Link
+											activeClassName="active_class"
+											className="f18 text-decoration-none pointer"
+											smooth={true}
+											duration={100}
+											spy={true}
+											offset={-10}
+											to="/#team"
+										>
 											Our Team
 										</Link>
 									</li>
 									<li className="ms-4 ps-2">
 										<NavLink
+											activeClassName="active_class"
 											className="f18 text-decoration-none pointer"
 											to="/winner"
 										>
@@ -62,17 +101,17 @@ const Header = () => {
 										</NavLink>
 									</li>
 									<li className="ms-4 ps-2">
-										<a href="">
+										<a target="blank" href="https://discord.gg/qfTc96uk">
 											<FaDiscord fontSize="1.8rem" />
 										</a>
 									</li>
 									<li className="ms-4 ps-2">
-										<a href="">
+										<a target="blank" href="https://www.instagram.com/csg_nft/">
 											<BsInstagram fontSize="1.6rem" />
 										</a>
 									</li>
 									<li className="ms-4 ps-2">
-										<a href="">
+										<a target="blank" href="https://twitter.com/CSG_NFT">
 											<FaTwitter fontSize="1.6rem" />
 										</a>
 									</li>

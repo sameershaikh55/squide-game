@@ -215,7 +215,7 @@ body {
 // HEADER START
 .header_container {
 	position: fixed;
-	z-index: 1;
+	z-index: 99999999;
 	width: 100%;
 	padding-top: 3rem;
 	transition: 0.6s;
@@ -233,6 +233,10 @@ body {
 			}
 		}
 	}
+
+	.active_class {
+		color: $color1;
+	}
 }
 
 .header_container.sticky {
@@ -241,6 +245,77 @@ body {
 	background-color: #000;
 }
 // HEADER END
+
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+	position: fixed;
+	right: 0%;
+	left: 0%;
+	bottom: 0%;
+	color: white;
+	font-size: 2rem;
+	background-color: #000;
+	height: 100vh;
+	z-index: 11111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	transition: 0.5s;
+
+	.logo {
+		position: absolute;
+		top: 3%;
+		left: 3%;
+
+		img {
+			width: 120px;
+		}
+	}
+
+	.connectBtn {
+		button {
+			border: none;
+			background: $color1;
+			border-radius: 5px;
+			color: #fff;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+.SideBarContainer ul {
+	padding-left: 0rem;
+}
+
+.SideBarContainer ul li {
+	position: relative;
+	list-style: none;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	padding: 0.4rem 0rem;
+	text-align: center;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		position: relative;
+		padding-bottom: 5px;
+	}
+}
+
+.CrossBTn {
+	position: absolute;
+	top: 8.2%;
+	right: 5.5%;
+	cursor: pointer;
+}
+/* ==================== SideBAR STYLING END ======================== */
 
 // HEADER START
 .hero_container {
@@ -253,7 +328,7 @@ body {
 		url("../assets/hero.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	width: 100%;
 	min-height: 1250px;
 
@@ -789,6 +864,20 @@ Main components
 
 // 	MEDIA QUERIES START
 @media screen and (max-width: 998px) {
+	.hero_container {
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 1) 18%,
+				rgba(0, 0, 0, 0.25253851540616246) 50%,
+				rgba(0, 0, 0, 1) 75%
+			),
+			url("../assets/hero.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		min-height: 1250px;
+	}
 	.header_container .logo_cont {
 		width: 94.59px;
 	}
@@ -876,6 +965,11 @@ Main components
 	}
 	.roadmap_container .cd-timeline-content p {
 		margin: 0.8em 0;
+	}
+	.nft_winner_container {
+		.f28 {
+			font-size: 24px;
+		}
 	}
 }
 // 	MEDIA QUERIES END

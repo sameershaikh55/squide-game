@@ -26,7 +26,7 @@ const Team = () => {
 	];
 
 	return (
-		<div className="team_container">
+		<div id="team" className="team_container">
 			<div className="page_container">
 				<div className="container-fluid">
 					<div className="row">

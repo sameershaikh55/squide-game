@@ -15,7 +15,7 @@ const Hero = () => {
 				<br />
 				<br />
 			</div>
-			<div className="hero_container">
+			<div id="about" className="hero_container">
 				<div className="page_container text_content w-100">
 					<div className="container-fluid">
 						<div className="row">

@@ -35,8 +35,8 @@ const Piggy = () => {
 								<div className="row gy-4">
 									{data.map((prev, i) => {
 										return (
-											<div key={i} className="col-4">
-												<img src={prev.i} alt="" />
+											<div key={i} className="col-10 col-sm-6 col-md-4 mx-auto">
+												<img className="w-100" src={prev.i} alt="" />
 												<div className="text-center">
 													<h4 className="color1 fw600 f22">10 SOLANA</h4>
 													<p className="text-white f14">Data not updated</p>

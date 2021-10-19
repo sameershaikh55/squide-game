@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cta = () => {
+const Cta = ({ rp }) => {
 	return (
 		<div className="cta_container mt-5">
 			<div className="page_container">
@@ -10,7 +10,9 @@ const Cta = () => {
 							<h4 className="f24 text-center text-white mb-3">
 								You will find our Collection Squid Game in Solanart
 							</h4>
-							<button className="themeBtn2 fw700">Go to Solanart</button>
+							<button id={(rp && "roadmap") || ""} className="themeBtn2 fw700">
+								Go to Solanart
+							</button>
 						</div>
 					</div>
 				</div>
