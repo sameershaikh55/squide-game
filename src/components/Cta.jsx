@@ -2,7 +2,7 @@ import React from "react";
 
 const Cta = () => {
 	return (
-		<div className="cta_container">
+		<div className="cta_container mt-5">
 			<div className="page_container">
 				<div className="container-fluid d-flex flex-column justify-content-center align-items-center">
 					<h4 className="f24 text-center text-white mb-3">

@@ -9,6 +9,7 @@ import logo from "../assets/logo.svg";
 
 // IMPORT REACT SCROLL
 import { Link } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
 
 const Header = () => {
 	useEffect(() => {
@@ -45,9 +46,12 @@ const Header = () => {
 								</Link>
 							</li>
 							<li className="ms-4 ps-2">
-								<Link className="f18 text-decoration-none pointer" to="">
+								<LinkR
+									className="f18 text-decoration-none pointer"
+									to="/winner"
+								>
 									Winners
-								</Link>
+								</LinkR>
 							</li>
 							<li className="ms-4 ps-2">
 								<a href="">

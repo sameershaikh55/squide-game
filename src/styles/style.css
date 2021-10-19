@@ -94,6 +94,10 @@ body {
   font-size: 1.5rem;
 }
 
+.f28 {
+  font-size: 1.75rem;
+}
+
 .f34 {
   font-size: 2.125rem;
 }
@@ -177,6 +181,10 @@ body {
 
 .color2 {
   color: #606060;
+}
+
+.color3 {
+  color: #ffc909;
 }
 
 .themeBtn {
@@ -320,5 +328,114 @@ body {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.nft_winner_container {
+  padding-top: 12rem;
+}
+
+.nft_winner_container .inner_nft_winner {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.piggy_container .inner_nft_winner {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boss_container {
+  margin-bottom: 3.2rem;
+}
+
+.boss_container .inner_nft_winner {
+  max-width: 466px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login_container {
+  background: #000;
+  height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_container .form_container {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login_container .form_container input {
+  background: #555555;
+  border-radius: 6px;
+  height: 44px;
+  border: none;
+  padding: 0rem 1rem;
+  color: #fff;
+}
+
+.login_container .form_container input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.login_container .form_container input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.login_container .form_container input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.login_container .form_container input::placeholder {
+  color: #fff;
+}
+
+.login_container .form_container input:focus {
+  outline: none;
+}
+
+.login_container .form_container button {
+  background: #eb4984;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  height: 44px;
+  color: #fff;
+  border: none;
+}
+
+.panel_container input {
+  background: #555555;
+  border-radius: 6px;
+  border: none;
+  height: 44px;
+}
+
+.panel_container input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.panel_container input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.panel_container input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.panel_container input::placeholder {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

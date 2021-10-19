@@ -10,6 +10,7 @@
 // VARIABLES START
 $color1: #eb4984;
 $color2: #606060;
+$color3: #ffc909;
 // VARIABLES END
 
 // GLOBAL START
@@ -91,6 +92,10 @@ body {
 
 .f24 {
 	font-size: 1.5rem;
+}
+
+.f28 {
+	font-size: 1.75rem;
 }
 
 .f34 {
@@ -177,6 +182,10 @@ body {
 
 .color2 {
 	color: $color2;
+}
+
+.color3 {
+	color: $color3;
 }
 
 .themeBtn {
@@ -332,3 +341,95 @@ body {
 	}
 }
 // TEAM END
+
+// 	WINNER START
+.nft_winner_container {
+	padding-top: 12rem;
+
+	.inner_nft_winner {
+		max-width: 780px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+// 	WINNER END
+
+// 	PIGGY START
+.piggy_container {
+	.inner_nft_winner {
+		max-width: 780px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+// 	PIGGY END
+
+// 	BOSS START
+.boss_container {
+	margin-bottom: 3.2rem;
+
+	.inner_nft_winner {
+		max-width: 466px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+// 	BOSS END
+
+// 	LOGIN START
+.login_container {
+	background: #000;
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.form_container {
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+
+		input {
+			background: #555555;
+			border-radius: 6px;
+			height: 44px;
+			border: none;
+			padding: 0rem 1rem;
+			color: #fff;
+
+			&::placeholder {
+				color: #fff;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		button {
+			background: #eb4984;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+			border-radius: 6px;
+			height: 44px;
+			color: #fff;
+			border: none;
+		}
+	}
+}
+// 	LOGIN END
+
+// 	PANEL START
+.panel_container {
+	input {
+		background: #555555;
+		border-radius: 6px;
+		border: none;
+		height: 44px;
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+}
+// 	PANEL END
