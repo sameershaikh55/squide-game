@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // IMPORTING COMPONENTS
 import Header from "../../components/Header";
