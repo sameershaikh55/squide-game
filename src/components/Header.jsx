@@ -62,7 +62,6 @@ const Header = ({ isOpen, ClickEvent }) => {
 								<ul className="list-unstyled d-none d-md-flex mb-0">
 									<li>
 										<Link
-											activeClassName="active_class"
 											className="f18 text-decoration-none pointer"
 											to="/#about"
 										>
@@ -71,7 +70,6 @@ const Header = ({ isOpen, ClickEvent }) => {
 									</li>
 									<li className="ms-4 ps-2">
 										<Link
-											activeClassName="active_class"
 											className="f18 text-decoration-none pointer"
 											to="/#roadmap"
 										>
@@ -80,12 +78,7 @@ const Header = ({ isOpen, ClickEvent }) => {
 									</li>
 									<li className="ms-4 ps-2">
 										<Link
-											activeClassName="active_class"
 											className="f18 text-decoration-none pointer"
-											smooth={true}
-											duration={100}
-											spy={true}
-											offset={-10}
 											to="/#team"
 										>
 											Our Team

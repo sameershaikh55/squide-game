@@ -5,7 +5,7 @@ import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 
 // IMPORTING SCROLL
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen, ClickEvent }) => {
 	return (
@@ -19,51 +19,16 @@ const Sidebar = ({ isOpen, ClickEvent }) => {
 		>
 			<ul className="list-unstyled mb-0">
 				<li className="mb-0">
-					<Link
-						activeClass="activeNav"
-						to="about"
-						smooth={true}
-						duration={300}
-						spy={true}
-					>
-						About
-					</Link>
+					<Link to="/#about">About</Link>
 				</li>
 				<li className="mb-0">
-					<Link
-						activeClass="activeNav"
-						to="roadmap"
-						smooth={true}
-						duration={300}
-						spy={true}
-						offset={-100}
-					>
-						Roadmap
-					</Link>
+					<Link to="/#roadmap">Roadmap</Link>
 				</li>
 				<li className="mb-0">
-					<Link
-						activeClass="activeNav"
-						to="team"
-						smooth={true}
-						duration={300}
-						spy={true}
-						offset={-50}
-					>
-						Our Team
-					</Link>
+					<Link to="/#team">Our Team</Link>
 				</li>
 				<li className="mb-0">
-					<Link
-						activeClass="activeNav"
-						to="/winner"
-						smooth={true}
-						duration={300}
-						spy={true}
-						offset={-50}
-					>
-						Winners
-					</Link>
+					<Link to="/#winner">Winners</Link>
 				</li>
 				<li>
 					<a target="blank" href="https://discord.gg/qfTc96uk">

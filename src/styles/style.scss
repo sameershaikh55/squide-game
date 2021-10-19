@@ -54,6 +54,45 @@ body {
 // 	}
 // }
 
+.redColor {
+	color: red;
+}
+
+.loading_page {
+	position: fixed;
+	height: 100vh;
+	background: #000;
+	width: 100%;
+	z-index: 999;
+	transition: 0.5s;
+
+	svg {
+		margin: 0 auto;
+		width: 10%;
+		height: auto;
+	}
+
+	.inner_loading {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.5s;
+	}
+}
+// .loader {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	height: 100vh;
+// 	position: fixed;
+// 	top: 0%;
+// 	bottom: 0%;
+// 	left: 0%;
+// 	right: 0%;
+// 	width: 100%;
+// }
+
 .f8 {
 	font-size: 0.5rem;
 }
@@ -198,6 +237,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.6s;
+	font-weight: 600;
+
+	&:hover {
+		background-color: #ec3477;
+	}
 }
 
 .themeBtn2 {
@@ -230,6 +275,11 @@ body {
 
 			a {
 				color: #fff;
+				transition: 0.6s;
+
+				&:hover {
+					color: $color1;
+				}
 			}
 		}
 	}
@@ -843,6 +893,10 @@ Main components
 		border-radius: 6px;
 		border: none;
 		height: 44px;
+
+		&:focus {
+			outline: none;
+		}
 
 		&::placeholder {
 			color: #fff;

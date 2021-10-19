@@ -1,25 +1,32 @@
-// import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-// // IMPORTING COMPONENTS
-// import Login from "./Login";
+// IMPORTING COMPONENTS
+import Login from "./Login";
+import Dashboard from "./Dashboard";
 
-// const Access = () => {
-// 	const [tableState, setTableState] = useState(1);
+const Access = () => {
+	const [authState, setAuthState] = useState();
 
-// 	const [authState, setAuthState] = useState();
+	let auth = localStorage.getItem("auth");
 
-// 	let auth = localStorage.getItem("auth");
+	useEffect(() => {
+		if (auth === null) {
+			localStorage.setItem("auth", 0);
+			setAuthState(!authState);
+		}
+	}, []);
 
-// 	useEffect(() => {
-// 		if (auth === null) {
-// 			localStorage.setItem("auth", 0);
-// 			setAuthState(!authState);
-// 		}
-// 	}, []);
+	useEffect(() => {}, [auth]);
 
-// 	useEffect(() => {}, [auth]);
+	return (
+		<div>
+			{(auth == "1" && (
+				<>
+					<Dashboard authState={authState} setAuthState={setAuthState} />
+				</>
+			)) || <Login authState={authState} setAuthState={setAuthState} />}
+		</div>
+	);
+};
 
-// 	return <div>{(auth == "1" && <>panel</>) || <Login />}</div>;
-// };
-
-// export default Access;
+export default Access;

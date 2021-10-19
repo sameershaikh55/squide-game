@@ -1,7 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+// IMPORTING FIREBASE
+import { db } from "../firebase/firebase";
 
 const Roadmap = () => {
-	const [percent, setPercent] = useState(10);
+	const [percent, setPercent] = useState();
+
+	// FOR PERCENTAGE
+	useEffect(() => {
+		const getPostsFromFirebase = [];
+		const subscriber = db.collection("roadmap").onSnapshot((querySnapshot) => {
+			querySnapshot.forEach((doc) => {
+				getPostsFromFirebase.push({
+					...doc.data(), //spread operator
+					key: doc.id, // `id` given to us by Firebase
+				});
+			});
+			setPercent(Number(getPostsFromFirebase[0].roadmap));
+		});
+
+		// return cleanup function
+		return () => subscriber();
+	}, [percent]); // empty dependencies array => useEffect only called once
 
 	return (
 		<>
@@ -35,9 +55,9 @@ const Roadmap = () => {
 									(percent === 90 && "cd-timeline9") ||
 									(percent === 100 && "cd-timeline10")
 								}`}
-								class="cd-container"
+								className="cd-container"
 							>
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 10 && "#eb4984") || "#fff",
@@ -45,13 +65,13 @@ const Roadmap = () => {
 												percent >= 10 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-picture"
+										className="cd-timeline-img cd-picture"
 									></div>
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-md-none fw600 ${
+												className={`d-block d-md-none fw600 ${
 													(percent >= 10 && "color1") || "text-white"
 												}`}
 											>
@@ -65,7 +85,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 10 && "color1") || "text-white"
 											}`}
 										>
@@ -76,7 +96,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 20 && "#eb4984") || "#fff",
@@ -84,14 +104,14 @@ const Roadmap = () => {
 												percent >= 20 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-movie"
+										className="cd-timeline-img cd-movie"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start w-100">
 											<h2
-												class={`d-block d-md-none fw600 ${
+												className={`d-block d-md-none fw600 ${
 													(percent >= 20 && "color1") || "text-white"
 												}`}
 											>
@@ -105,7 +125,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 20 && "color1") || "text-white"
 											}`}
 										>
@@ -116,7 +136,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 30 && "#eb4984") || "#fff",
@@ -124,14 +144,14 @@ const Roadmap = () => {
 												percent >= 30 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-picture"
+										className="cd-timeline-img cd-picture"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 30 && "color1") || "text-white"
 												}`}
 											>
@@ -143,7 +163,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 30 && "color1") || "text-white"
 											}`}
 										>
@@ -154,7 +174,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 40 && "#eb4984") || "#fff",
@@ -162,14 +182,14 @@ const Roadmap = () => {
 												percent >= 40 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-location"
+										className="cd-timeline-img cd-location"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 40 && "color1") || "text-white"
 												}`}
 											>
@@ -181,7 +201,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 40 && "color1") || "text-white"
 											}`}
 										>
@@ -192,7 +212,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 50 && "#eb4984") || "#fff",
@@ -200,14 +220,14 @@ const Roadmap = () => {
 												percent >= 50 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-location"
+										className="cd-timeline-img cd-location"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 50 && "color1") || "text-white"
 												}`}
 											>
@@ -221,7 +241,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 50 && "color1") || "text-white"
 											}`}
 										>
@@ -232,7 +252,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 60 && "#eb4984") || "#fff",
@@ -240,14 +260,14 @@ const Roadmap = () => {
 												percent >= 60 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-movie"
+										className="cd-timeline-img cd-movie"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 60 && "color1") || "text-white"
 												}`}
 											>
@@ -261,7 +281,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 60 && "color1") || "text-white"
 											}`}
 										>
@@ -272,7 +292,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 70 && "#eb4984") || "#fff",
@@ -280,13 +300,13 @@ const Roadmap = () => {
 												percent >= 70 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-location"
+										className="cd-timeline-img cd-location"
 									></div>
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 60 && "color1") || "text-white"
 												}`}
 											>
@@ -300,7 +320,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 70 && "color1") || "text-white"
 											}`}
 										>
@@ -311,7 +331,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 80 && "#eb4984") || "#fff",
@@ -319,14 +339,14 @@ const Roadmap = () => {
 												percent >= 80 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-movie"
+										className="cd-timeline-img cd-movie"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 80 && "color1") || "text-white"
 												}`}
 											>
@@ -343,7 +363,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 80 && "color1") || "text-white"
 											}`}
 										>
@@ -354,7 +374,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 90 && "#eb4984") || "#fff",
@@ -362,13 +382,13 @@ const Roadmap = () => {
 												percent >= 90 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-location"
+										className="cd-timeline-img cd-location"
 									></div>
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 90 && "color1") || "text-white"
 												}`}
 											>
@@ -385,7 +405,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 90 && "color1") || "text-white"
 											}`}
 										>
@@ -396,7 +416,7 @@ const Roadmap = () => {
 								</div>
 								{/* <!-- cd-timeline-block --> */}
 
-								<div class="cd-timeline-block">
+								<div className="cd-timeline-block">
 									<div
 										style={{
 											background: (percent >= 100 && "#eb4984") || "#fff",
@@ -404,14 +424,14 @@ const Roadmap = () => {
 												percent >= 100 &&
 												"0 0 0 4px #eb4984, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
 										}}
-										class="cd-timeline-img cd-movie"
+										className="cd-timeline-img cd-movie"
 									></div>
 									{/* <!-- cd-timeline-img --> */}
 
-									<div class="cd-timeline-content">
+									<div className="cd-timeline-content">
 										<div className="d-flex justify-content-start justify-content-lg-end w-100">
 											<h2
-												class={`d-block d-lg-none fw600 ${
+												className={`d-block d-lg-none fw600 ${
 													(percent >= 100 && "color1") || "text-white"
 												}`}
 											>
@@ -428,7 +448,7 @@ const Roadmap = () => {
 											</div>
 										</div>
 										<span
-											class={`d-none d-lg-block cd-date fw600 ${
+											className={`d-none d-lg-block cd-date fw600 ${
 												(percent >= 100 && "color1") || "text-white"
 											}`}
 										>
