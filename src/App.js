@@ -2,6 +2,9 @@
 import "./styles/style.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+// IMPORT BOOTSTRAP
+import "bootstrap";
+
 // IMPORT REACT ROUTER
 import { Route, Switch } from "react-router-dom";
 
