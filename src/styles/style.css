@@ -112,6 +112,10 @@ body {
   line-height: 65px;
 }
 
+.f48 {
+  font-size: 3rem;
+}
+
 .f64 {
   font-size: 4rem;
   line-height: 71px;
@@ -163,6 +167,10 @@ body {
   line-height: 36px;
 }
 
+.lh36 {
+  line-height: 36px;
+}
+
 .color1 {
   color: #eb4984;
 }
@@ -178,6 +186,24 @@ body {
   border: none;
   border-radius: 6px;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.themeBtn2 {
+  padding: 10px 20px;
+  height: 44px;
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  color: #eb4984;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,8 +239,8 @@ body {
 }
 
 .hero_container {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, black), color-stop(50%, rgba(0, 0, 0, 0.252539)), to(black)), url("../assets/hero.jpg");
-  background: linear-gradient(180deg, black 18%, rgba(0, 0, 0, 0.252539) 50%, black 100%), url("../assets/hero.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, black), color-stop(50%, rgba(0, 0, 0, 0.252539)), color-stop(75%, black)), url("../assets/hero.jpg");
+  background: linear-gradient(180deg, black 18%, rgba(0, 0, 0, 0.252539) 50%, black 75%), url("../assets/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -228,5 +254,71 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.collection_container {
+  margin-top: -20rem;
+}
+
+.collection_container .nft_container {
+  --bs-gutter-x: 1.2rem;
+  --bs-gutter-y: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.collection_container .nft_container > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.collection_container .nft_container .nft_card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20%;
+}
+
+.collection_container .nft_container .nft_card .img_cont {
+  position: relative;
+}
+
+.collection_container .nft_container .nft_card .img_cont h4 {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.collection_container .nft_container .nft_card img {
+  border-radius: 35px;
+  position: relative;
+}
+
+.cta_container {
+  background-color: #eb4984;
+  width: 100%;
+  margin: 40px 0px 70px 0px;
+  padding: 2rem 0rem;
+}
+
+.team_container .inner_team {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=style.css.map */

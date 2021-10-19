@@ -1,6 +1,45 @@
 import React from "react";
 
+// IMPORTING IMAGES
+import Team1 from "../assets/nft/Team-2.png";
+import Team2 from "../assets/nft/Team-3.png";
+import front from "../assets/nft/front-man.png";
+
 const Collection = () => {
+	// DATA
+	const data = [
+		{
+			i: Team2,
+			t: "Soldiers",
+			a: "536 NFT",
+			p: "They are the ones in charge of enforcing the rules of the game.",
+		},
+		{
+			i: Team1,
+			t: "Players",
+			a: "456 NFT",
+			p: "These are the participants in the game.",
+		},
+		{
+			i: front,
+			t: "Front man",
+			a: "1 NFT",
+			p: "The one who controls the game.",
+		},
+		{
+			i: Team1,
+			t: "Vips",
+			a: "6 NFT",
+			p: "Guests who are invited to enjoy the game.",
+		},
+		{
+			i: Team1,
+			t: "Boss",
+			a: "1 NFT",
+			p: "The head of the game organisation.",
+		},
+	];
+
 	return (
 		<div className="collection_container">
 			<div className="page_container">
@@ -16,6 +55,24 @@ const Collection = () => {
 					<br />
 					<h5 className="para color1 fw600 text-center">Types of NFT</h5>
 					<br />
+
+					<div className="nft_container">
+						{data.map((prev, ind) => {
+							const { i, p, t, a } = prev;
+							return (
+								<div key={ind} className="nft_card">
+									<div className="img_cont">
+										<img className="w-100" src={i} alt="" />
+										<h4 className="text-white f28 fw700">{t}</h4>
+									</div>
+									<div className="text-center">
+										<p className="mt-2 mb-1 f18 color1">{a}</p>
+										<p className="text-white f14">{p}</p>
+									</div>
+								</div>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
