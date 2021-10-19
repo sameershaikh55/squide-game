@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import swal from "sweetalert";
 
 // IMPORT FIREBASE
@@ -13,8 +13,13 @@ import logo from "../../assets/logo.svg";
 import ring from "../../assets/ring.svg";
 
 const Dashboard = ({ authState, setAuthState }) => {
+	// LOADER
 	const [loader, setLoader] = useState();
 	const [activeloader, setActiveLoader] = useState(false);
+
+	// LOADER
+	const [winnerData, setWinnerData] = useState([]);
+	const [winner, setWinner] = useState();
 
 	// VIP
 	const [nftState, setNftState] = useState({
@@ -104,6 +109,33 @@ const Dashboard = ({ authState, setAuthState }) => {
 			n: "solana3",
 		},
 	];
+
+	// WINNER DATA
+	useEffect(() => {
+		const getPostsFromFirebase = [];
+		const subscriber = db
+			.collection("generate-winner")
+			.onSnapshot((querySnapshot) => {
+				querySnapshot.forEach((doc) => {
+					getPostsFromFirebase.push({
+						...doc.data(), //spread operator
+						key: doc.id, // `id` given to us by Firebase
+					});
+				});
+				setWinnerData(getPostsFromFirebase);
+			});
+
+		// return cleanup function
+		return () => subscriber();
+	}, [winnerData]); // empty dependencies array => useEffect only called once
+
+	// RANDOM WINNER GENERATOR
+	const generator = () => {
+		var theRandomNumber;
+		theRandomNumber = Math.floor(Math.random() * winnerData.length) + 0;
+		setWinner(winnerData[theRandomNumber].w);
+	};
+	// RANDOM WINNER GENERATOR
 
 	// VIP NFT CLICK START
 	const handleClick = (data) => {
@@ -245,7 +277,7 @@ const Dashboard = ({ authState, setAuthState }) => {
 								<img src={ring} alt="" />
 							</div>
 							<h4 className="text-center mt-4 color1 fw600">Winner is:</h4>
-							<p className="text-center text-white mb-4">LOLO</p>
+							<p className="text-center text-white mb-4">{winner}</p>
 							<button className="w-100 themeBtn" data-bs-dismiss="modal">
 								Select
 							</button>
@@ -297,8 +329,6 @@ const Dashboard = ({ authState, setAuthState }) => {
 													i: i,
 												});
 											}}
-											// data-bs-toggle="modal"
-											// data-bs-target="#exampleModal"
 											className="w-100 themeBtn mt-2"
 										>
 											{(activeloader &&
@@ -332,7 +362,12 @@ const Dashboard = ({ authState, setAuthState }) => {
 											placeholder={`Enter ${prev.t.toLowerCase()}`}
 											onChange={handleChange2}
 										/>
-										<button className="w-100 themeBtn mt-2">
+										<button
+											onClick={generator}
+											className="w-100 themeBtn mt-2"
+											data-bs-toggle="modal"
+											data-bs-target="#exampleModal"
+										>
 											Generate winner
 										</button>
 										<button
@@ -373,7 +408,14 @@ const Dashboard = ({ authState, setAuthState }) => {
 									value={boss}
 									onChange={(e) => setBoss(e.target.value)}
 								/>
-								<button className="w-100 themeBtn mt-2">Generate winner</button>
+								<button
+									onClick={generator}
+									className="w-100 themeBtn mt-2"
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+								>
+									Generate winner
+								</button>
 								<button onClick={handleClick3} className="w-100 themeBtn mt-2">
 									{(activeloader && loader.t === "boss" && boss !== "" && (
 										<div className="w-25 mx-auto">

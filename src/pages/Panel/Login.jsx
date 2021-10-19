@@ -32,6 +32,7 @@ const Login = ({ authState, setAuthState }) => {
 		// return cleanup function
 		return () => subscriber();
 	}, [posts]); // empty dependencies array => useEffect only called once
+	
 	const emailHandle = (e) => {
 		setEmail(e.target.value);
 
