@@ -153,6 +153,18 @@ body {
   cursor: pointer;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.01%, #000000), color-stop(64.34%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(360deg, #000000 0.01%, rgba(0, 0, 0, 0) 64.34%);
+}
+
 .head {
   font-weight: bold;
   font-size: 4.5rem;
@@ -395,7 +407,7 @@ body {
 
 .collection_container .nft_container .nft_card .img_cont h4 {
   position: absolute;
-  bottom: 0%;
+  bottom: -5%;
   left: 50%;
   width: 100%;
   -webkit-transform: translateX(-50%);

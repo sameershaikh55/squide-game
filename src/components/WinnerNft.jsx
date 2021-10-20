@@ -51,7 +51,7 @@ const WinnerNft = () => {
 		// return cleanup function
 		return () => subscriber();
 	}, [post]); // empty dependencies array => useEffect only called once
-	
+
 	return (
 		<div className="nft_winner_container">
 			<div className="page_container">
@@ -70,7 +70,10 @@ const WinnerNft = () => {
 									{data.map((prev, i) => {
 										return (
 											<div key={i} className="col-10 col-sm-6 col-md-4 mx-auto">
-												<img className="w-100" src={prev.i} alt="" />
+												<div className="position-relative">
+													<img className="w-100" src={prev.i} alt="" />
+													<div class="overlay"></div>
+												</div>
 												<div className="text-center">
 													<h4 className="color3 fw600 f22">VIP BEAR</h4>
 													<p className="text-white f14">

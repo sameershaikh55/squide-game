@@ -41,7 +41,10 @@ const BossNft = () => {
 							</div>
 
 							<div className="inner_nft_winner mt-5">
-								<img className="w-100" src={Team} alt="" />
+								<div className="position-relative">
+									<img className="w-100" src={Team} alt="" />
+									<div class="overlay"></div>
+								</div>
 								<div className="text-center">
 									<h1 className="color3 fw600">BOSS NFT</h1>
 									<p className="text-white f28">

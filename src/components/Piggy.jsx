@@ -61,7 +61,10 @@ const Piggy = () => {
 									{data.map((prev, i) => {
 										return (
 											<div key={i} className="col-10 col-sm-6 col-md-4 mx-auto">
-												<img className="w-100" src={prev.i} alt="" />
+												<div className="position-relative">
+													<img className="w-100" src={prev.i} alt="" />
+													<div class="overlay"></div>
+												</div>
 												<div className="text-center">
 													<h4 className="color1 fw600 f22">10 SOLANA</h4>
 													<p className="text-white f14">

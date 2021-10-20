@@ -67,6 +67,7 @@ const Collection = () => {
 										<div key={ind} className="nft_card mt-4 mt-sm-0">
 											<div className="img_cont">
 												<img className="w-100" src={i} alt="" />
+												<div class="overlay"></div>
 												<h4 className="text-white f28 fw700">{t}</h4>
 											</div>
 											<div className="text-center">
